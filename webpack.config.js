@@ -102,10 +102,7 @@ const distConfig = baseConfig
 // build the examples and debugging tools in `build/`
 const buildConfig = baseConfig
     .clone()
-    .enableDevServer(process.env.PORT || 8601, {
-        disableHostCheck: true,
-        allowedHosts: ["scratch.codemath.vn"],
-    })
+    .enableDevServer(process.env.PORT || 8601)
     .merge({
         entry: {
             gui: "./src/playground/index.jsx",
